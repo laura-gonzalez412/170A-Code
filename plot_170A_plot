@@ -1,0 +1,16 @@
+% Define the wavelength
+lambda = 632.8; % in nm
+
+% Define different values of step height (in terms of lambda)
+hs_values = [0.1, 0.5, 1.0];
+
+% Calculate topological charge for each step height
+Q_values = (2 * pi * hs_values) / lambda;
+
+% Plot the results
+figure;
+plot(hs_values, Q_values, 'o-', 'LineWidth', 2);
+xlabel('Step Height (h_s / \lambda)');
+ylabel('Topological Charge (Q)');
+title('Topological Charge vs Step Height');
+grid on;
